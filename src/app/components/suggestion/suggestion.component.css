@@ -1,0 +1,15 @@
+.news{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+    margin-right: 23px;
+}
+.imge{
+    height: 200px; 
+    width: 100%; 
+    display: block;
+}
+.formSug{
+    display: block;
+    justify-content: center;
+}

@@ -1,0 +1,10 @@
+.news{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+}
+.imge{
+    height: 200px; 
+    width: 100%; 
+    display: block;
+}
