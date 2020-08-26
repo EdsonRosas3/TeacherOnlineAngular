@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "profesorEnLinea"
+    }
+  },
+  "defaultProject": "profesorEnLinea",
+  "cli": {
+    "analytics": "917e726f-fc6c-449a-ba64-fa52df30ae89"
+  }
 }
