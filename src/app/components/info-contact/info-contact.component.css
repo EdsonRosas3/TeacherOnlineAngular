@@ -1,0 +1,48 @@
+.personalInfo{
+    text-align: center;
+}
+.cardInfo{
+   
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+    column-gap: 5px;
+    align-content: center;
+}
+.image img{
+    width: 25%;
+    height: 25%;
+    border-radius: 50%;
+}
+.description{
+    width: 100%;
+   display: flex;
+   justify-content: center;
+}
+.description p{
+    width: 90%;
+}
+.social{
+    display: grid;
+    grid-template-columns:repeat(2,1fr);
+}
+
+@media screen and (max-width: 775px) {
+
+    .cardInfo{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 650px) {
+
+    .cardInfo{
+       display: block;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .cardInfo{
+       display: grid;
+       grid-template-columns:50% 50%;
+    }
+}
