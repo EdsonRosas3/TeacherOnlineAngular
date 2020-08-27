@@ -34,4 +34,13 @@
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
       </form>
     </div>
+      <div *ngIf="!user">
+        <a class="nav-link" routerLink="/login" >Login</a>
+      </div>
+     
+      <div *ngIf="user">
+        <a class="nav-link" routerLink="/login" ><img class="imgUser" src="{{ user.photoUrl }}" ></a>
+       
+      </div>
+     
   </nav>

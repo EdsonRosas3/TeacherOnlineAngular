@@ -1,0 +1,21 @@
+.container{
+    position: sticky;
+    width: 100%;
+  
+}
+.title{
+    text-align: center;
+}
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 20px;
+    align-content: center;
+}
+.data{
+    text-align: center;
+}
+.image{
+    border-radius: 2px;
+    box-shadow: 5px rgb(61, 57, 57);
+}
