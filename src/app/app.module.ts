@@ -19,7 +19,8 @@ import {
   AmazonLoginProvider,
 } from 'angularx-social-login';
 import { LoginComponent } from './components/login/login.component';
-
+//form
+import {ReactiveFormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { LoginComponent } from './components/login/login.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    SocialLoginModule
+    SocialLoginModule,
+    ReactiveFormsModule
   ],
   providers: [
     {

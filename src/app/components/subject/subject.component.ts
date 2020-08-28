@@ -25,7 +25,6 @@ export class SubjectComponent implements OnInit {
       res=>{
         this.subjects = res;
         this.subjects = this.subjects.subjects;
-        console.log(this.subjects);
       },
       err=>console.log(err)
     )

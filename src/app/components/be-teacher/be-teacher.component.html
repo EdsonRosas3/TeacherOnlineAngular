@@ -1,1 +1,96 @@
-<p>be-teacher works!</p>
+<div class="jumbotron mt-2 teacherContent">
+    <h3>Convierte en nuestro profesor</h3>
+
+    <div class="login" *ngIf="!user">
+        <h5>Primero inicia seción con Google</h5>
+        <a routerLink="/login" class="card-link">Ir a iniciar seción</a>
+    </div>
+
+  
+    <div class="register" >
+        <h4 *ngIf="user">Hola {{user.name}}</h4>
+
+        <form [formGroup]="signupForm" (ngSubmit)="save(signupForm.value)">
+            <p>
+                Universidad: <br/>
+                <input class="form-control" type="text" formControlName="university">
+            </p>
+           
+            <p  class="error" *ngIf="signupForm.get('university').hasError('required') && signupForm.get('university').touched">
+                Es un campo requerido.
+            </p>
+            <p class="error" *ngIf="signupForm.get('university').hasError('maxlength')">
+                El nombre de la Universidad es muy grande.
+            </p>
+               
+
+            <p>
+                Carrera: <br/>
+                <input class="form-control" type="text" formControlName="carrera">
+            </p>
+           
+            <p class="error" *ngIf="signupForm.get('carrera').hasError('required') && signupForm.get('carrera').touched">
+                  Es un campo requerido.
+            </p>
+            <p class="error" *ngIf="signupForm.get('carrera').hasError('maxlength')">
+                El nombre de la carrera es muy grande.
+            </p>
+
+
+            <div class="contact">
+                <p>
+                    Número de Whatsapp: <br/>
+                    <input class="form-control form-control-sm" type="text" formControlName="whatsapp">
+                </p>
+                <p class="error" *ngIf="signupForm.get('whatsapp').hasError('required') && signupForm.get('whatsapp').touched">
+                    Ingresa tu numero para que los usurios puedan contactarte.
+                </p>
+                <p class="error" *ngIf="signupForm.get('whatsapp').hasError('maxlength')">
+                    El numero es muy grande.
+                </p>
+
+                <p>
+                    Enlace de Telegram: <br/>
+                    <input class="form-control form-control-sm" type="text" formControlName="telegram">
+                </p>
+                <p class="error" *ngIf="signupForm.get('telegram').hasError('required') && signupForm.get('telegram').touched">
+                    Ingresa tu enlace para que los usurios puedan contactarte.
+                </p>
+                <p class="error" *ngIf="signupForm.get('telegram').hasError('maxlength')">
+                    El enlace es muy grande.
+                </p>
+            </div>
+            
+            
+            <p>
+              Descripción: <br/>
+              <textarea class="form-control" rows="4" formControlName="description"></textarea>
+              <small>{{ signupForm.get('description').value.length }}/160</small>
+            </p>
+            
+            <p class="error" *ngIf="signupForm.get('description').hasError('required') && signupForm.get('description').touched">
+                Es un campo requerido, agrega una descripción para que los usuarios sepan mas sobre tí
+              </p>
+            <p class="error" *ngIf="signupForm.get('description').hasError('maxlength')">
+                Te pasaste, máximo deben haber 160 caracteres.
+            </p>
+
+            <!--<p>
+              Catego: <br/>
+              <select formControlName="category">
+                <option value="1">Programación</option>
+                <option value="2">Matemática</option>
+                <option value="3">Física</option>
+                <option value="4">Química</option>
+                <option value="5">Economía</option>
+                <option value="6">Medisina</option>
+                <option value="7">Biología</option>
+                <option value="8">Otro</option>
+              </select>
+            </p>-->
+            <p>Todos los usuarios de la plataforma Profesor en Linea prodrar ver a esta información</p>
+            <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary">Registrarse</button>
+          </form>
+       
+    </div>
+</div>
