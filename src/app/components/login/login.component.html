@@ -20,6 +20,8 @@
             <a routerLink="/teachers" class="card-link">Ver profesores</a>
            
     </div>
-   
+    <div class="addSubjects mt-3" *ngIf="user">
+        <a class="btn btn-primary btn-lg" role="button" routerLink="/my-subjects">Agregar Materias</a>
+    </div>
 
 </div>

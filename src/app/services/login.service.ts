@@ -24,7 +24,6 @@ export class LoginService {
   }
   setToken(token:string){
     this.token= token;
-    console.log(this.token);
    
   }
   getDetails(){

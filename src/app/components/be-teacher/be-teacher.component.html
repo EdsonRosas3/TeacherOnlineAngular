@@ -1,5 +1,5 @@
 <div class="jumbotron mt-2 teacherContent">
-    <h3>Convierte en nuestro profesor</h3>
+    <h3 *ngIf="flagisTeacher==false">Convierte en nuestro profesor</h3>
 
     <div class="login" *ngIf="!user">
         <h5>Primero inicia seción con Google</h5>
@@ -7,7 +7,7 @@
     </div>
 
   
-    <div class="register"   *ngIf="user">
+    <div class="register"  *ngIf="user && flagisTeacher==false" >
         <h4 *ngIf="user">Hola {{user.name}}</h4>
 
         <form [formGroup]="signupForm" (ngSubmit)="save(signupForm.value)">
@@ -88,9 +88,19 @@
                 <option value="8">Otro</option>
               </select>
             </p>-->
-            <p>Todos los usuarios de la plataforma Profesor en Linea prodrar ver a esta información</p>
+            <p>Todos los usuarios de la plataforma Profesor en Linea prodrar ver esta información</p>
             <button type="submit" [disabled]="signupForm.invalid" class="btn btn-primary">Registrarse</button>
-          </form>
-       
-    </div>
+
+           
+            </form>
+         </div>
+         <div *ngIf="flagisTeacher">
+            <h2>Bienvenid<i class="far fa-smile-beam"></i> Teacher {{user.name}}</h2>
+         </div>
+         <div *ngIf="flagisTeacher==false && flagAddSubject">
+             <h2>Usted ya es profesor</h2>
+         </div>
+        <div class="addSubjects mt-3" *ngIf="flagAddSubject">
+            <a class="btn btn-primary btn-lg" role="button" routerLink="/my-subjects">Agregar Materias</a>
+        </div>
 </div>

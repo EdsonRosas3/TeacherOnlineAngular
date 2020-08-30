@@ -4,6 +4,7 @@ import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-logi
 import { SocialUser } from "angularx-social-login";
 import {UserService} from "../../services/user.service";
 import {LoginService} from "../../services/login.service";
+import {TeacherService} from "../../services/teacher.service";
 
 @Component({
   selector: 'app-login',
@@ -21,6 +22,7 @@ export class LoginComponent implements OnInit {
     private authService: SocialAuthService,
     private userService: UserService,
     private loginService: LoginService,
+    private teacherService: TeacherService,
     ) { 
       this.getusers();
     }
@@ -77,6 +79,7 @@ export class LoginComponent implements OnInit {
           this.success=res;
           this.success =this.success.success;
           this.loginService.setToken(this.success.token);
+          this.teacherService.setToken(this.success.token);
           this.details();
         }
       )
@@ -92,6 +95,7 @@ export class LoginComponent implements OnInit {
             this.success=res;
             this.success =this.success.success;
             this.loginService.setToken(this.success.token);
+            this.teacherService.setToken(this.success.token);
             this.details();
           }
          
@@ -102,7 +106,7 @@ export class LoginComponent implements OnInit {
   details(){
     this.loginService.getDetails().subscribe(
       res=>{
-        console.log('resultado final',res);
+        this.teacherService.receiveUser(res);
       },
       err=>console.log(err)
     )
