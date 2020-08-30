@@ -5,6 +5,7 @@ import {InfoContactComponent} from './components/info-contact/info-contact.compo
 import {SubjectComponent} from './components/subject/subject.component';
 import {TeacherComponent} from './components/teacher/teacher.component';
 import {LoginComponent} from './components/login/login.component';
+import {MySubjectsComponent} from './components/my-subjects/my-subjects.component';
 
 const routes: Routes = [
   { path: 'subjects', component: SubjectComponent },
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'be-teacher', component: BeTeacherComponent },
   { path: 'info-contact', component: InfoContactComponent },
   { path: 'login', component: LoginComponent},
+  { path: 'my-subjects', component: MySubjectsComponent},
   { path: '',   redirectTo: '/subject', pathMatch: 'full' }, 
   { path: '**', component: SubjectComponent },
 ];

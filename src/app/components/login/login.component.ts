@@ -32,6 +32,7 @@ export class LoginComponent implements OnInit {
       this.userIsRegistered();
       this.loggedIn = (user != null);
     });
+   
   }
   getusers(){
     this.userService.getUsers()
@@ -76,11 +77,12 @@ export class LoginComponent implements OnInit {
           this.success=res;
           this.success =this.success.success;
           this.loginService.setToken(this.success.token);
+          this.details();
         }
       )
      
     }else{
-        console.log('ya estas registrado');
+       
         const user ={
           email:this.user.email,
           password:this.user.id,
@@ -90,10 +92,21 @@ export class LoginComponent implements OnInit {
             this.success=res;
             this.success =this.success.success;
             this.loginService.setToken(this.success.token);
+            this.details();
           }
          
         )
     }
+  }
+
+  details(){
+    this.loginService.getDetails().subscribe(
+      res=>{
+        console.log('resultado final',res);
+      },
+      err=>console.log(err)
+    )
+    
   }
 
 

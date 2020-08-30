@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import {AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NewsComponent } from './components/news/news.component';
@@ -10,7 +10,7 @@ import { SubjectComponent } from './components/subject/subject.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
 import { BeTeacherComponent } from './components/be-teacher/be-teacher.component';
 import { InfoContactComponent } from './components/info-contact/info-contact.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule} from '@angular/common/http';
 //Social
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {
@@ -20,7 +20,8 @@ import {
 } from 'angularx-social-login';
 import { LoginComponent } from './components/login/login.component';
 //form
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { MySubjectsComponent } from './components/my-subjects/my-subjects.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +33,15 @@ import {ReactiveFormsModule} from '@angular/forms';
     TeacherComponent,
     BeTeacherComponent,
     InfoContactComponent,
-    LoginComponent
+    LoginComponent,
+    MySubjectsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     SocialLoginModule,
+    FormsModule,
     ReactiveFormsModule
   ],
   providers: [

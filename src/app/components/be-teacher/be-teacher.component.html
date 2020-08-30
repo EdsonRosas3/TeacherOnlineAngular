@@ -7,7 +7,7 @@
     </div>
 
   
-    <div class="register" >
+    <div class="register"   *ngIf="user">
         <h4 *ngIf="user">Hola {{user.name}}</h4>
 
         <form [formGroup]="signupForm" (ngSubmit)="save(signupForm.value)">
