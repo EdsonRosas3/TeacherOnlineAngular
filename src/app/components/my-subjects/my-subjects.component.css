@@ -1,0 +1,36 @@
+.myContent{
+    position: sticky;
+}
+.subjects{
+    width: 100%;
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+@media screen and (max-width: 810px) {
+
+    .subjects{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 650px) {
+
+    .subjects{
+       display: block;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .subjects{
+       display: grid;
+       grid-template-columns:50% 50%;
+    }
+}
+@media screen and (max-width: 410px) {
+
+    .subjects{
+       display: grid;
+       grid-template-columns:50% 50%;
+    }
+}

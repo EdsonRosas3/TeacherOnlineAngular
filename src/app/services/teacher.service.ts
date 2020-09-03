@@ -22,7 +22,7 @@ export class TeacherService {
     this.URI = 'http://127.0.0.1:8000/api/teachers/';
   }
   addTeacher(teacher){
-    console.log(teacher)
+   
     let headers = new HttpHeaders()
  
     headers=headers.append('content-type','application/json')
@@ -37,7 +37,7 @@ export class TeacherService {
 
   getTeacher(i:string){
     return this.http.get(this.URI+i);
-  }
+  } 
   infoTeacher(teacherTeacher){
     this.teacher = teacherTeacher;
   }

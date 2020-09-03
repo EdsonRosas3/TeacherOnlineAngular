@@ -11,10 +11,12 @@ export class LoginService {
   URIlogin:string='';
   URIdetails:string='';
   token:string='';
+  URIteacherid:string='';
   constructor(private http:HttpClient) { 
     this.URIregister = 'http://127.0.0.1:8000/api/register';
     this.URIlogin = 'http://127.0.0.1:8000/api/login';
     this.URIdetails = 'http://localhost:8000/api/details';
+    this.URIteacherid= 'http://127.0.0.1:8000/api/teacherUser/'
   }
   postRegister(newUser){
     return this.http.post(this.URIregister,newUser)
@@ -24,7 +26,6 @@ export class LoginService {
   }
   setToken(token:string){
     this.token= token;
-   
   }
   getDetails(){
       let headers = new HttpHeaders()
@@ -34,5 +35,8 @@ export class LoginService {
     
     return this.http.post(this.URIdetails,{} ,{headers});
 
+  }
+  getTeacherId(i:string){
+    return this.http.get(this.URIteacherid+i);
   }
 }

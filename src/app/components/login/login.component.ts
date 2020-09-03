@@ -60,12 +60,15 @@ export class LoginComponent implements OnInit {
   }
 
   userIsRegistered(){
-    
+   if(this.users){
     this.users.forEach(userI => {
       if(this.user.email == userI.email){
         this.flag=true;
       }
     });
+   } 
+   
+
     if(!this.flag){
       const user = {
         first_name:this.user.firstName,
@@ -86,6 +89,7 @@ export class LoginComponent implements OnInit {
      
     }else{
        
+      if(this.user){
         const user ={
           email:this.user.email,
           password:this.user.id,
@@ -100,6 +104,8 @@ export class LoginComponent implements OnInit {
           }
          
         )
+      }
+       
     }
   }
 
