@@ -1,0 +1,14 @@
+<div class=" subjects"  >
+    <div *ngFor="let subject of subjects">
+        <div class="card border-primary mt-3 ml-2" style="max-width: 16rem; ">
+            <div class="card-header"><h5>{{subject.name_suject}}</h5></div>
+            <div class="card-body">
+              <p class="card-text">{{subject.description}}</p>
+              <h6>Precio: {{subject.price}} bs.</h6>
+            </div>
+            
+            <button type="button" routerLink="/info-contact" (click)="teacherId(subject.teacher_id)" class="btn btn-primary btn-sm">Ver información completa</button>
+        </div>
+    </div>
+</div>
+

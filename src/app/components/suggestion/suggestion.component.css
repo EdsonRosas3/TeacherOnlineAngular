@@ -1,0 +1,13 @@
+.news{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 75px;
+    margin-right: 23px;
+}
+.formSug{
+    display: block;
+    justify-content: center;
+}
+.suggestion{
+    width:auto ;
+}

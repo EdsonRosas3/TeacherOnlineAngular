@@ -1,0 +1,27 @@
+<div class="container jumbotron mt-3">
+    <div class="title">
+        <h3>INICIO DE SECIÓN</h3> 
+    </div>
+
+    <div class="buttons">
+        <button type="button" class="btn btn-danger" (click)="signInWithGoogle()"><i class="fab fa-google mr-1"></i>Iniciar seción con google</button>
+        <button type="button" class="btn btn-primary" (click)="signOut()"><i class="fas fa-sign-out-alt mr-1"></i>Cerrar seción</button>
+    </div>
+
+    <div class="data mt-3" *ngIf="user">
+        <h3>BIENVENID<i class="far fa-smile-beam"></i></h3>
+        <img class="image" src="{{ user.photoUrl }}">
+            <div>
+            <h4>{{ user.name }}</h4>
+            <p>{{ user.email }}</p>
+            </div>
+            <a routerLink="/be-teacher" class="card-link">Ir a ser profesor</a>
+            <a routerLink="/subjects" class="card-link">Ver materias</a>
+            <a routerLink="/teachers" class="card-link">Ver profesores</a>
+           
+    </div>
+    <div class="addSubjects mt-3" *ngIf="user">
+        <a class="btn btn-primary btn-lg" role="button" routerLink="/my-subjects"><i class="fas fa-plus-circle"></i>Agregar Materias</a>
+    </div>
+
+</div>

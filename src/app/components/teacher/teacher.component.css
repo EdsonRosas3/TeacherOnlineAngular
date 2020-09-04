@@ -1,0 +1,31 @@
+.teachers{
+    display: grid;
+    grid-template-columns:repeat(3,1fr);
+}
+@media screen and (max-width: 810px) {
+
+    .teachers{
+        display: grid;
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 650px) {
+
+    .teachers{
+       display: block;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .teachers{
+       display: grid;
+       grid-template-columns:50% 50%;
+    }
+}
+@media screen and (max-width: 410px) {
+
+    .teachers{
+       display: grid;
+       grid-template-columns:50% 50%;
+    }
+}
