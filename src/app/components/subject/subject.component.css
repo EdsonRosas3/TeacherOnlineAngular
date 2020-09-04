@@ -21,6 +21,11 @@
     .subjects{
        display: grid;
        grid-template-columns:50% 50%;
+      
+    }
+    .marginrl{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 @media screen and (max-width: 410px) {
@@ -28,5 +33,10 @@
     .subjects{
        display: grid;
        grid-template-columns:50% 50%;
+    
+    }
+    .marginrl{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

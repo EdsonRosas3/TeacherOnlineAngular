@@ -1,7 +1,7 @@
 <div class="teachers mt-3">
     <div *ngFor="let teacher of teachers">
-        <div class="card border-primary mb-3 ml-2" style="max-width: 16rem;">
-            <div class="card-header"><h5>{{teacher.user.first_name}} {{teacher.user.last_name}}</h5></div>
+        <div class="card border-primary mb-3 marginrl" style="max-width: 16rem;">
+            <div class="card-header"><h5>{{teacher.user.first_name}} {{teacher.user.last_name}}</h5><img src="{{teacher.user.avatar}}" class="image" alt=""></div>
             <div class="card-body">
               <p class="card-text">{{teacher.description}}</p>
               <h6>Carrera: {{teacher.college_career}}</h6>

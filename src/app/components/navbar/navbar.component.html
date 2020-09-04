@@ -15,7 +15,7 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/be-teacher" routerLinkActive="active"><i class="fas fa-user-graduate mr-1"></i>Ser Profesor</a>
         </li>
-        <li class="nav-item dropdown">
+       <!--<li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-search"></i>Filtrar...</a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="#">Programación</a>
@@ -27,7 +27,7 @@
             <a class="dropdown-item" href="#">Biología</a>
             <a class="dropdown-item" href="#">Otros</a>
           </div>
-        </li>
+        </li>--> 
       </ul>
     </div>
       <div *ngIf="!user" class="card border-primary">
@@ -36,7 +36,6 @@
      
       <div *ngIf="user" >
         <a class="nav-link" routerLink="/login" ><img class="imgUser" src="{{ user.photoUrl }}" ></a>
-       
       </div>
      
   </nav>
