@@ -11,3 +11,23 @@
 .suggestion{
     width:auto ;
 }
+
+@media screen and (max-width: 980px) {
+    
+   .news{
+    margin-right: 0px;
+    margin-left: 3px;
+    margin-top: 2px;
+   }
+}
+
+@media screen and (max-width: 410px) {
+    .news{
+        margin-right: 0px;
+        margin-left: 0px;
+       }
+    .formSug{
+        margin-left: 10px;
+        margin-right: 8px;
+    }
+}

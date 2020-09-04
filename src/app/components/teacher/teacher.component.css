@@ -2,6 +2,11 @@
     display: grid;
     grid-template-columns:repeat(3,1fr);
 }
+.image{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
 @media screen and (max-width: 810px) {
 
     .teachers{
@@ -21,11 +26,19 @@
        display: grid;
        grid-template-columns:50% 50%;
     }
+    .marginrl{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
 }
 @media screen and (max-width: 410px) {
 
     .teachers{
        display: grid;
        grid-template-columns:50% 50%;
+    }
+    .marginrl{
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }

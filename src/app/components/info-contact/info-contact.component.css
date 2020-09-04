@@ -26,6 +26,12 @@
     grid-template-columns:repeat(2,1fr);
 }
 
+
+@media screen and (max-width: 980px) {
+    .margin{
+        margin-right: 20px;
+    }
+}
 @media screen and (max-width: 775px) {
 
     .cardInfo{
@@ -44,5 +50,9 @@
     .cardInfo{
        display: grid;
        grid-template-columns:50% 50%;
+    }
+    .margin{
+        margin-right: 10px;
+        margin-left: 4px;
     }
 }

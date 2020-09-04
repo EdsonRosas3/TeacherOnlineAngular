@@ -8,3 +8,12 @@
     width: 100%; 
     display: block;
 }
+
+@media screen and (max-width: 500px) {
+    .news{
+        top: 60px;
+        margin-left: 0px;
+        margin-right: 12px;
+
+    }
+}

@@ -1,10 +1,10 @@
 <div class="personalInfo">
     
-    <div class="card border-primary mb-3 mt-3">
+    <div class="card border-primary mb-3 mt-3 margin">
         <p>{{teacher.user.college_career}} </p>
         <h4> {{teacher.user.first_name}} {{teacher.user.last_name}}</h4>
         <div class="image">
-            <img src="https://mir-s3-cdn-cf.behance.net/projects/404/e12c9799204121.5eed4500a4099.jpg" alt="">
+            <img src="{{teacher.user.avatar}}" alt="">
         </div>
         
     
@@ -17,17 +17,19 @@
        
         <h6>Contactame por WHATSAPP ó TELEGRAM</h6>
         <div class="social">
-            <a target="true" href="https://api.whatsapp.com/send?phone=63906568"><img src="https://cdn.icon-icons.com/icons2/99/PNG/64/whatsapp_socialnetwork_17360.png" alt="">      </a>
-    
+            <a target="true" href="https://api.whatsapp.com/send?phone={{teacher.whatsapp}}"><img src="https://cdn.icon-icons.com/icons2/99/PNG/64/whatsapp_socialnetwork_17360.png" alt=""></a>
+            <!--
+                    <i class="fab fa-whatsapp-square"></i>
+                    <i class="fab fa-telegram"></i>
+            -->
        
-            <a target="true" href="https://t.me/edsonrosas"> <img src="https://cdn.icon-icons.com/icons2/923/PNG/64/telegram_icon-icons.com_72055.png" alt=""> </a>
+            <a target="true" href="{{teacher.url_telegram}}"> <img src="https://cdn.icon-icons.com/icons2/923/PNG/64/telegram_icon-icons.com_72055.png" alt=""></a>
             
         </div>
        
     </div>
-    
-    
 </div>
+
     <h6>Las siguientes materias materias y temas son mi especialidad</h6>
 <div class="cardInfo">
     
